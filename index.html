@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehtävä 2: Lomakkeet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <header>Nettoasunto - Ilmianna liostokohde</header>
+        <div class="form">
+            <div class="block">
+                <h3>Ilmiantaja</h3>
+                <label for="username" class="label">Nimi:</label>
+                <br>
+                <input type="text" id="username" name="username" placeholder="Kirjoita nimesi tähän" class="inp">
+                <br>
+                <label for="phone" class="label">Puhelinnumero:</label>
+                <br>
+                <input type="text" id="phone" name="phone" placeholder="Puhelinnumero muodossa 040 xxx xxx x" class="inp">
+                <br>
+                <label for="mail" class="label">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Kirjoita sähköpostiosoitteesi tähän" class="inp">
+            </div>
+            <div class="block">
+                    <h3>Ilmoituksen URL</h3>
+                    <label for="url" class="label">Myynti-ilmoituksen URL:</label>
+                    <br>
+                    <input type="url" id="url" name="url" placeholder="Kopioi Jokakodin/Etuoven kohdeURL tähän"class="inp">
+            </div>
+
+            <div class="block">
+                <h3>Asunnon pyyntihinta</h3>
+                <label for="slider">1 kEUR</label>
+                <input type="range" id="slider" name="slider" min="1" max="500" class="slider">
+                    <p id="demo">1 kEUR</p>
+                <label for="slider">500 kEUR</label>
+            </div>
+
+            <div class="block">
+                <h3>Arvoimani hinta</h3>
+                <label for="slider">1 kEUR</label>
+                <input type="range" id="slider" name="slider" min="1" max="500" class="slider">
+                    <p id="demo">1 kEUR</p>
+                <label for="slider">500 kEUR</label>
+            </div>
+
+            <div class="block">
+                <h3>Suosikkiasuinalueeni</h3>
+                <input type="text" class="inp">
+            </div>
+            
+            <button class="btn">Ilmianna asunto!</button>
+        </div>
+
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2014 Q&D Software Ltd. Kaikki oikeudet pidetään.</p>
+    </footer>
+
+    <script>
+        var slider = document.getElementById("slider");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value; 
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script>
+</body>
+</html>
